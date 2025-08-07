@@ -1,0 +1,110 @@
+:root{
+    --bg-main:#779164;
+    --bg-sub:#184458;
+
+    --text-main-color:#ffffff;
+
+    --textbox-color:#4c64737f;
+    --textbox-boder-color:#26526d7f;
+    --textbox-sub-color:#1c4e6c;
+    
+    --about-bg-color:#184458;
+}
+
+*{
+    transition: all 1s;
+    margin: 0;
+}
+img{
+    height: auto;
+    width: 100%;
+}
+body{
+    padding: 0;
+    margin:0 ;
+    display: inline-block;
+}
+header{
+    display: none;
+}
+main{
+    background-color: var(--bg-main);
+    width: 100vw;
+    height: auto;
+}
+
+
+/* .top-image{
+} */
+
+.top-image--body{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+.top-image--body h1{
+    font-size: 5em;
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    color: var(--text-main-color);
+}
+.top-image__info--body{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+.top-image__info--box{
+    background-color: var(--textbox-color);
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    position: relative;
+    border-radius: 0 5px 5px 0;
+    border: var(--textbox-boder-color) solid 2px;
+    border-left: 0px;
+}
+.top-image__info--box-bo::after{
+    content: "";
+    width: 5px;
+    height: calc(100% + (2 * 2px));
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--textbox-sub-color);
+}
+.top-image__img-sec--box{
+    height: 80vh;
+    background-image: url(./src/img/top.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top-image__messege--body{
+    background-color: var(--about-bg-color);
+    width: 100%;
+    height: 80vh;
+}
+.top-image__messege--box{
+    width: 10em;
+    height: 20em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.top-image__messege--box a{
+    display: none;
+    position: absolute;
+    bottom: 4em;
+    left: -5em;
+}
+.top-image__messege--text{
+    writing-mode: vertical-rl;
+    color: var(--text-main-color);
+
+}
+
