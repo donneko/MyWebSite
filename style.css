@@ -3,12 +3,20 @@
     --bg-sub:#184458;
 
     --text-main-color:#ffffff;
+    --text-sub-color:#e1e1e1;
 
     --textbox-color:#4c64737f;
     --textbox-boder-color:#26526d7f;
     --textbox-sub-color:#1c4e6c;
     
     --about-bg-color:#184458;
+
+    /* バックグラウンドカラー */
+    --about-bg-color:#184458;
+    --about-slide-bg-color:#000000;
+    --about-slide--span--bg-color:#000000;
+    --about-slide__title-bg-color:#909090;
+
 }
 
 *{
@@ -23,6 +31,10 @@ body{
     padding: 0;
     margin:0 ;
     display: inline-block;
+
+    font-family: "Yuji Syuku", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 header{
     display: none;
@@ -33,6 +45,14 @@ main{
     height: auto;
 }
 
+
+/* フォント */
+.font--main{
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
 
 /* .top-image{
 } */
@@ -64,6 +84,8 @@ main{
     border-radius: 0 5px 5px 0;
     border: var(--textbox-boder-color) solid 2px;
     border-left: 0px;
+    font-weight: 400;
+    color: var(--text-sub-color);
 }
 .top-image__info--box-bo::after{
     content: "";
@@ -82,6 +104,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: inset  0 0 15px rgba(0, 0, 0, 0.5);
 }
 .top-image__messege--body{
     background-color: var(--about-bg-color);
@@ -105,6 +128,46 @@ main{
 .top-image__messege--text{
     writing-mode: vertical-rl;
     color: var(--text-main-color);
-
+    line-height: 1.5em;
 }
 
+.about-sec{
+    display:none;
+}
+
+.about-slide{
+    width: 100vw;
+    height: 200vh;
+    background-color: var(--about-slide-bg-color);
+}
+.about-slide--body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.about-slide--box{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    border-bottom: #4b4b4b 2px solid;
+}
+.about-slide__title{
+    width: 100%;
+    height: 100vh;
+    background-color:var(--about-slide__title-bg-color);
+}
+.about-slide__title span{
+    position: absolute;
+    background-color: var(--about-slide--span--bg-color);
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+}
+.about-slide__title span:nth-child(1){
+    top: 0;
+}
+.about-slide__title span:nth-child(2){
+    bottom: 0;
+}
